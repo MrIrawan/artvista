@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Main';
+    src: url('fonts/MarkaziText-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Secondary';
+    src: url('fonts/Outfit.ttf');
+}
+
+:root {
+    --color-main: #69247C;
+    --color-secondary: #ffffff;
+    --color-default: #000000;
+    --font-main: 'Main';
+    --font-secondary: 'Secondary';
+}
+
+#home {
+    background-color: var(--color-main);
+}
