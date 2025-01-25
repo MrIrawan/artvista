@@ -125,10 +125,9 @@ header {
 .home-item h1 {
     text-align: center;
     font-size: 4rem;
-    line-height: 1;
+    line-height: 5rem;
     margin: 1rem 0;
     font-family: var(--main-bold);
-    font-weight: 900;
 }
 
 .home-item h2 {
