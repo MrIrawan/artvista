@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Main';
-    src: url('/fonts/DMSerifText-Regular.ttf') format('truetype');
+    font-family: 'Main-Bold';
+    src: url('/fonts/NotoSerif-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -12,7 +12,7 @@
     --color-main: rgb(105, 36, 124);
     --color-secondary: #ffffff;
     --color-default: #000000;
-    --font-main: 'Main';
+    --main-bold: 'Main-Bold';
     --font-secondary: 'Secondary';
 }
 
@@ -39,6 +39,7 @@ header {
     line-height: 30px;
     transition: all .2s ease-in-out;
     cursor: pointer;
+    font-family: var(--main-bold);
 }
 
 .header-auth {
@@ -126,6 +127,8 @@ header {
     font-size: 4rem;
     line-height: 1;
     margin: 1rem 0;
+    font-family: var(--main-bold);
+    font-weight: 900;
 }
 
 .home-item h2 {
