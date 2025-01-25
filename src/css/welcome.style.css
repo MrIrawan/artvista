@@ -172,3 +172,8 @@ header {
     padding: 2rem 2rem;
     box-shadow: rgba(105, 36, 124, .7) 0px 2px 35px 15px, rgba(105, 36, 124, 0.7) 0px 2px 16px 0px;
 }
+
+.content-item img {
+    overflow: hidden;
+    object-fit: cover;
+}
