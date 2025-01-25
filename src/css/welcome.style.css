@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Main';
-    src: url('fonts/MarkaziText-Regular.ttf');
+    src: url('/fonts/MarkaziText-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Secondary';
-    src: url('fonts/Outfit.ttf');
+    src: url('/fonts/Outfit-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -16,6 +16,77 @@
     --font-secondary: 'Secondary';
 }
 
+* {
+    /* border: 1px solid var(--color-main); */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-secondary);
+}
+
 #home {
-    background-color: var(--color-main);
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.home-item h3 {
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    padding: .5rem .7rem;
+    border: 2px solid var(--color-main);
+    width: fit-content;
+    margin: auto auto;
+    border-radius: .5rem;
+    font-weight: 100;
+}
+
+.home-item h1 {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1;
+    margin: 1rem 0;
+}
+
+.home-item h2 {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.home-item .home-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .7rem 0;
+}
+
+.home-cta a {
+    padding: .6rem .8rem;
+    border-radius: .5rem;
+    text-decoration: none;
+}
+
+.home-cta a:nth-child(1) {
+    background: var(--color-main);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-main);
+}
+
+.home-cta a:nth-child(2) {
+    border: 2px solid var(--color-main);
+    color: var(--color-main);
 }
