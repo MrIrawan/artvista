@@ -27,6 +27,74 @@ body {
     font-family: var(--font-secondary);
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.header-title h2 {
+    font-size: 28px;
+    line-height: 30px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.header-auth {
+    display: flex;
+    gap: 1rem;
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.header-auth a {
+    padding: .6rem .8rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    border: 2px solid var(--color-main);
+}
+
+.header-auth a:nth-child(1) {
+    color: var(--color-main);
+}
+
+.header-auth a:nth-child(2) {
+    color: var(--color-secondary);
+    background: var(--color-main);
+}
+
+.navibar {
+    width: 100%;
+    padding: .8rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 5px 10px inset rgba(105, 36, 124, .2);
+}
+
+.navibar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navibar ul li {
+    list-style: none;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.navibar ul li a {
+    color: var(--color-default);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
 #home {
     padding-top: 8rem;
     padding-bottom: 6rem;
