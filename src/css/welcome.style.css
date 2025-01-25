@@ -16,10 +16,6 @@
     --font-secondary: 'Secondary';
 }
 
-* {
-    /* border: 1px solid var(--color-main); */
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -83,7 +79,7 @@ body {
 .home-cta a:nth-child(1) {
     background: var(--color-main);
     color: var(--color-secondary);
-    border: 2px solid var(--color-main);
+    border: 2px solid var(--mai);
 }
 
 .home-cta a:nth-child(2) {
