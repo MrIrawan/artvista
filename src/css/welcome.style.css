@@ -201,17 +201,31 @@ header {
     font-size: 28px;
     line-height: 30px;
     text-transform: capitalize;
+    margin-bottom: .6rem;
 }
 
 .about-item p {
     font-size: 20px;
     line-height: 1.25;
     max-width: 30rem;
+    margin: .6rem 0;
 }
 
 .about-item mark {
     background: var(--color-main);
     color: var(--color-secondary);
+}
+
+.about-item:nth-child(1) article:nth-child(1) {
+    margin-bottom: 3rem;
+}
+
+.about-item:nth-child(1) article:nth-child(2) {
+    margin-top: 3rem;
+}
+
+.try-feature {
+    margin: 2rem 0;
 }
 
 .try-feature form {
@@ -232,4 +246,11 @@ header {
     border: 1px solid var(--color-main);
     background: var(--color-main);
     color: var(--color-secondary);
+}
+
+.try-feature .feature-result {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #e5e7eb;
+    min-height: 400px;
 }
