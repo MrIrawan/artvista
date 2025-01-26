@@ -55,6 +55,9 @@ header {
     border-radius: .5rem;
     text-decoration: none;
     border: 2px solid var(--color-main);
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .header-auth a:nth-child(1) {
