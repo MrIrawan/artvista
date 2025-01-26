@@ -174,7 +174,7 @@ header {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     padding: 2rem 2rem;
-    box-shadow: rgba(105, 36, 124, .7) 0px 2px 35px 15px, rgba(105, 36, 124, 0.7) 0px 2px 16px 0px;
+    box-shadow: rgba(0, 0, 0, .7) 0px 2px 35px 15px, rgba(0, 0, 0, 0.7) 0px 2px 16px 0px;
 }
 
 .content-item {
