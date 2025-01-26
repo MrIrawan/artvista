@@ -73,6 +73,7 @@ header {
     top: 100%;
     left: 0;
     box-shadow: 0 5px 10px inset rgba(105, 36, 124, .2);
+    background: var(--color-main);
 }
 
 .navibar ul {
@@ -91,14 +92,14 @@ header {
 }
 
 .navibar ul li a {
-    color: var(--color-default);
+    color: var(--color-secondary);
     text-decoration: none;
     text-transform: capitalize;
 }
 
 #home {
-    padding-top: 8rem;
-    padding-bottom: 6rem;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
 }
 
 .home-container {
