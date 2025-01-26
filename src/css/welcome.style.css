@@ -71,7 +71,6 @@ header {
 
 .navibar {
     width: 100%;
-    padding: .8rem 0;
     position: absolute;
     top: 100%;
     left: 0;
@@ -84,6 +83,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin: 0;
 }
 
 .navibar ul li {
@@ -92,6 +92,9 @@ header {
     line-height: 24px;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .navibar ul li a {
