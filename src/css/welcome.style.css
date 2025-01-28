@@ -11,7 +11,7 @@
 }
 
 * {
-    border: 1px solid var(--color-main);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,7 +45,6 @@ header {
 
 .header-auth a {
     padding: .6rem .8rem;
-    border-radius: .5rem;
     text-decoration: none;
     border: 2px solid var(--color-main);
     display: flex;
@@ -118,7 +117,6 @@ header {
     border: 2px solid var(--color-main);
     width: fit-content;
     margin: auto auto;
-    border-radius: .5rem;
     font-weight: 100;
 }
 
@@ -146,7 +144,6 @@ header {
 
 .home-cta a {
     padding: .6rem .8rem;
-    border-radius: .5rem;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -325,4 +322,91 @@ header {
     text-decoration: none;
     font-size: 18px;
     line-height: 20px;
+}
+
+footer {
+    padding: 12rem 0 0 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-item:nth-child(1) {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    background: var(--color-main);
+}
+
+.footer-item:nth-child(1) h1 {
+    font-size: 30px;
+    line-height: 32px;
+    margin: .8rem 0 2rem 0;
+    color: var(--color-secondary);
+}
+
+.footer-item:nth-child(1) a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: .6rem .8rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-secondary);
+    text-decoration: none;
+    border: 2px solid var(--color-secondary);
+}
+
+.footer-item:nth-child(2) {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--color-main);
+}
+
+.footer-item:nth-child(2) .footer-linked {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.footer-linked div {
+    width: 50%;
+}
+
+.footer-linked div h3 {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin: .8rem 0;
+}
+
+.footer-linked ul {
+    padding: 0;
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-linked ul li {
+    list-style: none;
+    margin: .5rem 0;
+}
+
+.footer-linked ul li a {
+    color: var(--color-default);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.footer-container p {
+    text-align: center;
 }
