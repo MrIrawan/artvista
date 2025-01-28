@@ -254,3 +254,37 @@ header {
     background: #e5e7eb;
     min-height: 400px;
 }
+
+.about-item:nth-child(1) article:nth-child(2) .about-flex {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.about-item:nth-child(1) article:nth-child(2) .about-flex-item {
+    padding: 0 1rem;
+    border: 2px solid var(--color-main);
+}
+
+.about-flex-item .card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    /* background: #000; */
+}
+
+.card-header span {
+    display: inline-block;
+    height: fit-content;
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: .8rem 0;
+}
