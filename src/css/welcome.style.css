@@ -1,10 +1,5 @@
 @font-face {
-    font-family: 'Main-Bold';
-    src: url('/fonts/NotoSerif-Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Secondary';
+    font-family: 'Outfit';
     src: url('/fonts/Outfit-Regular.ttf') format('truetype');
 }
 
@@ -12,8 +7,7 @@
     --color-main: rgb(105, 36, 124);
     --color-secondary: #ffffff;
     --color-default: #000000;
-    --main-bold: 'Main-Bold';
-    --font-secondary: 'Secondary';
+    --font-main: 'Outfit';
 }
 
 /* * {
@@ -24,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-secondary);
+    font-family: var(--font-main);
 }
 
 header {
@@ -39,7 +33,6 @@ header {
     line-height: 30px;
     transition: all .2s ease-in-out;
     cursor: pointer;
-    font-family: var(--main-bold);
 }
 
 .header-auth {
@@ -134,7 +127,6 @@ header {
     font-size: 4rem;
     line-height: 5rem;
     margin: 1rem 0;
-    font-family: var(--main-bold);
 }
 
 .home-item h2 {
