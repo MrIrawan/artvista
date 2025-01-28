@@ -10,9 +10,9 @@
     --font-main: 'Outfit';
 }
 
-/* * {
+* {
     border: 1px solid var(--color-main);
-} */
+}
 
 body {
     margin: 0;
@@ -283,4 +283,46 @@ header {
 
 .card-body {
     margin: .8rem 0;
+}
+
+#collections {
+    padding: 12rem 0 8rem 0;
+}
+
+.collections-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.collections-container h3 {
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.collections-item {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.item-content {
+    width: fit-content;
+    padding: 1.5rem;
+    border: 2px solid var(--color-main);
+}
+
+.item-body h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: .6rem 0;
+}
+
+.item-body a {
+    color: var(--color-main);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
 }
