@@ -70,6 +70,14 @@ header {
     background: var(--color-main);
 }
 
+.fixed-navibar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px inset rgba(105, 36, 124, .2);
+    background: var(--color-main);
+}
+
 .navibar ul {
     display: flex;
     justify-content: center;
