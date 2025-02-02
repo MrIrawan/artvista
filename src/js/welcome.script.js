@@ -12,13 +12,15 @@ function fixedNavOnScroll() {
 
 function onMenuIconClick() {
     if (!isMenuOnClick) {
-        menuIcon.innerHTML = 'menu_open';
+        menuIcon.innerHTML = "menu_open";
         isMenuOnClick = true;
     } else {
-        menuIcon.innerHTML = 'menu';
+        menuIcon.innerHTML = "menu";
         isMenuOnClick = false;
     }
 }
 
-window.onscroll = fixedNavOnScroll;
-menuIcon.onclick = onMenuIconClick;
+window.onload = () => {
+    window.onscroll = fixedNavOnScroll;
+    menuIcon.onclick = onMenuIconClick;
+}

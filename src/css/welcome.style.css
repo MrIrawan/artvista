@@ -482,7 +482,13 @@ footer {
     }
 
     .navibar ul {
-        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navibar {
+        overflow: hidden;
+        max-width: 0;
     }
 
     .menu-btn, .menu-btn span {
