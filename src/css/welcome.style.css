@@ -47,6 +47,12 @@ header {
     cursor: pointer;
 }
 
+.menu-btn span {
+    display: none;
+    font-size: 30px;
+    line-height: 34px;
+}
+
 .header-auth a {
     padding: .6rem .8rem;
     text-decoration: none;
@@ -423,9 +429,14 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 767px) {
     .home-item {
         padding-top: 5rem;
+    }
+
+    .home-item h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
 
     .home-item:nth-child(2) {
@@ -437,5 +448,17 @@ footer {
         justify-content: space-between;
         align-items: center;
         gap: 4rem;
+    }
+
+    .collections-item {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .header-auth {
+        display: none;
+    }
+
+    .menu-btn span {
+        display: inline-block;
     }
 }
