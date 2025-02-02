@@ -14,6 +14,10 @@
     scroll-behavior: smooth;
 }
 
+*{
+    border: 1px solid rebeccapurple;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -417,4 +421,21 @@ footer {
 
 .footer-container p {
     text-align: center;
+}
+
+@media screen and (max-width: 1040px) {
+    .home-item {
+        padding-top: 5rem;
+    }
+
+    .home-item:nth-child(2) {
+        display: none;
+    }
+
+    .about-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+    }
 }
