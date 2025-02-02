@@ -47,10 +47,19 @@ header {
     cursor: pointer;
 }
 
-.menu-btn span {
+.menu-btn, .menu-btn span {
     display: none;
     font-size: 30px;
     line-height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.menu-btn {
+    padding: 1rem;
+}
+
+.menu-btn span {
+    cursor: pointer;
 }
 
 .header-auth a {
@@ -429,9 +438,13 @@ footer {
     text-align: center;
 }
 
+.menu-btn span:active {
+    transform: scale(.8);
+}
+
 @media screen and (max-width: 767px) {
-    .home-item {
-        padding-top: 5rem;
+    #home, #about, #collections {
+        padding: 8rem 0 8rem 0;
     }
 
     .home-item h1 {
@@ -440,6 +453,10 @@ footer {
     }
 
     .home-item:nth-child(2) {
+        display: none;
+    }
+
+    .home-cta a:nth-child(2) {
         display: none;
     }
 
@@ -458,7 +475,17 @@ footer {
         display: none;
     }
 
-    .menu-btn span {
+    header {
+        justify-content: space-between;
+        padding: 0 2rem;
+        border: 2ps solid var(--color-main);
+    }
+
+    .navibar ul {
+        display: none;
+    }
+
+    .menu-btn, .menu-btn span {
         display: inline-block;
     }
 }
