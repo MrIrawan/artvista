@@ -1,6 +1,4 @@
 const navibar = document.querySelector('.navibar');
-const menuIcon = document.querySelector('.menu-btn span');
-let isMenuOnClick = false;
 
 function fixedNavOnScroll() {
     if (window.scrollY >= 80) {
@@ -10,17 +8,6 @@ function fixedNavOnScroll() {
     }
 }
 
-function onMenuIconClick() {
-    if (!isMenuOnClick) {
-        menuIcon.innerHTML = "menu_open";
-        isMenuOnClick = true;
-    } else {
-        menuIcon.innerHTML = "menu";
-        isMenuOnClick = false;
-    }
-}
-
 window.onload = () => {
     window.onscroll = fixedNavOnScroll;
-    menuIcon.onclick = onMenuIconClick;
 }
