@@ -473,4 +473,23 @@ footer {
     .menu-btn, .menu-btn span {
         display: inline-block;
     }
+
+    .footer-item:nth-child(1) div h1 {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .footer-item:nth-child(2) .footer-linked {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-linked div:nth-child(1) {
+        order: 2;
+    }
+
+    .footer-linked div:nth-child(2) {
+        order: 1;
+    }
 }
