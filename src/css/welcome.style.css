@@ -419,8 +419,8 @@ footer {
     text-align: center;
 }
 
-.menu-btn span:active {
-    transform: scale(.8);
+.try-feature form input:focus {
+    outline: none;
 }
 
 @media screen and (max-width: 767px) {
