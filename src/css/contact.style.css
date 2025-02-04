@@ -42,3 +42,51 @@ header div p span {
     color: var(--color-default);
     font-weight: 600;
 }
+
+.form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+.form-container {
+    padding: 2rem;
+    border: 1px solid var(--color-default);
+}
+
+.flex-item div span {
+    display: block;
+    margin: 1rem 0;
+}
+
+.flex-item div span label {
+    display: block;
+    margin: .4rem 0;
+    font-weight: 600;
+}
+
+.flex-item div span input {
+    width: 93%;
+    padding: .5rem .5rem;
+    border: 1px solid var(--color-main);
+}
+
+.flex-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.flex-item div {
+    width: 100%;
+}
+
+.flex-item div:nth-child(2) textarea {
+    width: 93%;
+    padding: .5rem .5rem;
+    border: 1px solid var(--color-main);
+    resize: none;
+    height: 200px;
+}
