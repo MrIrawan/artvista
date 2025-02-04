@@ -12,7 +12,7 @@ function fixedNavOnScroll() {
     }
 }
 
-function onTryFeatureHandler() {
+async function onTryFeatureHandler() {
     resultContainer.innerHTML = "";
 
     if (featureSearchInput.value === "") {
@@ -24,17 +24,20 @@ function onTryFeatureHandler() {
     }
     
     try {
-        const data = getDataFromAPI(`https://api.unsplash.com/photos?random=10&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`);
-        data.then((response) => {
-            response.forEach(data => {
-                console.log(data);
-                resultContainer.insertAdjacentHTML('beforeend', `
-                    <article class="image-card">
-                        <img src="${data.urls.small}" alt="${data.alt_description}">
-                    </article>
-                `);
-            })
-        })
+        const keyword = encodeURIComponent(featureSearchInput.value);
+        const apiUrl = `https://api.unsplash.com/search/photos?query=${keyword}&per_page=10&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+        
+        const result = await getDataFromAPI(apiUrl).then(data => data.results);
+        result.forEach(data => {
+            resultContainer.insertAdjacentHTML('beforeend', `
+                <article class="image-card">
+                    <img src="${data.urls.small}" alt="${data.alt_description}">
+                </article>
+            `);
+        });
+        
+        
+
     } catch (err) {
         console.error('message error', err);
         
