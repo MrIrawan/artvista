@@ -12,6 +12,7 @@
 
 * {
     scroll-behavior: smooth;
+    /* border: 1px solid var(--color-main); */
 }
 
 body {
@@ -52,13 +53,17 @@ header div p span {
 }
 
 .form-container {
-    padding: 2rem;
+    padding: 2rem 1rem;
     border: 1px solid var(--color-default);
 }
 
 .flex-item div span {
     display: block;
     margin: 1rem 0;
+}
+
+.contact-title h1 {
+    margin: .8rem 0;
 }
 
 .flex-item div span label {
@@ -68,25 +73,59 @@ header div p span {
 }
 
 .flex-item div span input {
-    width: 93%;
+    display: block;
+    width: 96%;
     padding: .5rem .5rem;
     border: 1px solid var(--color-main);
 }
 
 .flex-item {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 2rem;
 }
 
 .flex-item div {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.flex-item div:nth-child(2) textarea {
-    width: 93%;
+.flex-item div span textarea {
+    display: block;
+    width: 96%;
     padding: .5rem .5rem;
     border: 1px solid var(--color-main);
-    resize: none;
     height: 200px;
+    resize: vertical;
+}
+
+.button-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-wrapper button {
+    display: flex;
+    align-items: center;
+    padding: .5rem .8rem;
+    border: 2px solid var(--color-main);
+    font-size: 18px;
+    line-height: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.button-wrapper button:nth-child(1) {
+    background: var(--color-main);
+    color: var(--color-secondary);
+}
+
+.button-wrapper button:nth-child(2) {
+    background: var(--color-secondary);
+    color: var(--color-main);
+}
+
+.button-wrapper button span {
+    margin: 0;
+    font-size: 28px;
+    line-height: 30px;
 }
