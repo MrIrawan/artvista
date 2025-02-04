@@ -129,3 +129,11 @@ header div p span {
     font-size: 28px;
     line-height: 30px;
 }
+
+footer {
+    border-top: 1px solid var(--color-main);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
