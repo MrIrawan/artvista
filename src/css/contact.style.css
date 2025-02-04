@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-Regular.ttf') format('truetype');
+}
+
+:root {
+    --color-main: rgb(105, 36, 124);
+    --color-secondary: #ffffff;
+    --color-default: #000000;
+    --font-main: 'Outfit';
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
