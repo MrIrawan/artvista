@@ -20,3 +20,25 @@ body {
     box-sizing: border-box;
     font-family: var(--font-main);
 }
+
+header {
+    padding: .7rem .8rem;
+    border: 1px solid var(--color-default);
+}
+
+header div {
+    width: fit-content;
+}
+
+header div p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+header div p span {
+    display: inline-block;
+    color: var(--color-default);
+    font-weight: 600;
+}
