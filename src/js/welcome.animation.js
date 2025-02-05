@@ -5,32 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger);
 
 
-const timeLine = gsap.timeline();
-
-timeLine.from('.home-item h1', {y: 20, opacity: 0, duration: 1})
-        .from('.home-item h2', {y: 20, opacity: 0, duration: 1}, '+=0.2')
-        .from('.home-cta a', {y: 20, opacity: 0, duration: 1}, '+=0.4')
-        .from('.home-item:nth-child(2)', {y: 20, opacity: 0, duration: 1}, '+=0.6')
-
-
-gsap.from('.about-item', {
-    scrollTrigger: '.about-item',
-    y: 20,
-    opacity: 0,
-    duration: 1
-})
-
-gsap.from('.about-flex-item', {
-    scrollTrigger: '.about-flex-item',
-    x: -20,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.7
-})
-
-gsap.from('.try-feature', {
-    scrollTrigger: '.try-feature',
-    y: 20,
-    opacity: 0,
-    duration: 1
-})
+const fadeFromBottom = (element, delay = 0) => {
+    gsap.from(element, {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        delay: delay,
+        ease: "power2.out"
+    })
+}
