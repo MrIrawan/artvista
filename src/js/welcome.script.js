@@ -42,6 +42,8 @@ async function onTryFeatureHandler() {
         console.error('message error', err);
         
     }
+
+    featureSearchInput.value = "";
 }
 
 
