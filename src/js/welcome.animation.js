@@ -1,16 +1,9 @@
-import { gsap } from 'gsap'
-
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-
-gsap.registerPlugin(ScrollTrigger);
+import { fadeToDirection } from "./utils/AnimationSettings";
 
 
-const fadeToDirection = (element, delay = 0, direction = 'y', value = 50) => {
-    gsap.from(element, {
-        opacity: 0,
-        [direction]: value,
-        duration: 1,
-        delay: delay,
-        ease: "power2.out"
-    })
-}
+fadeToDirection(
+    '.home-item h1',
+    .5,
+    'y',
+    40
+);
