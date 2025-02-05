@@ -5,10 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger);
 
 
-const fadeFromBottom = (element, delay = 0) => {
+const fadeToDirection = (element, delay = 0, direction = 'y', value = 50) => {
     gsap.from(element, {
         opacity: 0,
-        y: 30,
+        [direction]: value,
         duration: 1,
         delay: delay,
         ease: "power2.out"
