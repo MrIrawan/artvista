@@ -4,7 +4,7 @@
 }
 
 :root {
-    --color-main: rgb(105, 36, 124);
+    --color-main: #69247c;
     --color-secondary: #ffffff;
     --color-default: #000000;
     --font-main: 'Outfit';
@@ -76,6 +76,7 @@ header {
     left: 0;
     box-shadow: 0 5px 10px inset rgba(105, 36, 124, .2);
     background: var(--color-main);
+    z-index: 1000;
 }
 
 .navibar ul {
