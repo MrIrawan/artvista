@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-Regular.ttf') format('truetype');
+}
+
+:root {
+    --color-main: #69247c;
+    --color-secondary: #ffffff;
+    --color-default: #000000;
+    --font-main: 'Outfit';
+}
+
+* {
+    scroll-behavior: smooth;
+    /* border: 1px solid rebeccapurple; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header-search {
+    width: 40%;
+    padding: 1rem 0;
+}
+
+.header-search input {
+    width: 100%;
+    padding: .5rem .7rem;
+    border: 1px solid var(--color-main);
+}
+
+.header-auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-auth a {
+    display: flex;
+    align-items: center;
+    padding: .7rem 1.5rem;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    border: 2px solid var(--color-main);
+    transition: all .2s ease-in-out;
+}
+
+.header-auth a:nth-child(1) {
+    background: var(--color-secondary);
+    color: var(--color-main);
+}
+
+.header-auth a:nth-child(2) {
+    background: var(--color-main);
+    color: var(--color-secondary);
+}
+
+.header-auth .navmenu-btn span {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 34px;
+}
