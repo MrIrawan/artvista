@@ -26,7 +26,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
 }
 
 .header-search {
@@ -52,36 +52,51 @@ header {
     padding-left: .5rem;
 }
 
-.header-auth {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-}
-
-.header-auth a {
-    display: flex;
-    align-items: center;
-    padding: .7rem 1.5rem;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 20px;
-    border: 2px solid var(--color-main);
-    transition: all .2s ease-in-out;
-}
-
-.header-auth a:nth-child(1) {
-    background: var(--color-secondary);
-    color: var(--color-main);
-}
-
-.header-auth a:nth-child(2) {
-    background: var(--color-main);
-    color: var(--color-secondary);
-}
-
-.header-auth .navmenu-btn span {
+.header-menu .navmenu-btn span {
     display: inline-block;
     font-size: 30px;
     line-height: 34px;
+}
+
+.navibar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    background: var(--color-secondary);
+    border-top: 1px solid var(--color-main);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.navibar p {
+    font-size: 20px;
+    line-height: 30px;
+    margin: .5rem 0;
+    padding: 0 1rem 0 0;
+    border-right: 1px solid var(--color-default);
+    color: var(--color-default);
+    height: 30px;
+}
+
+.navibar ul {
+    padding: 0 0 0 1rem;
+    display: flex;
+    gap: 1rem;
+    margin: .5rem 0;
+    border-left: 1px solid var(--color-default);
+    height: 30px;
+}
+
+.navibar ul li {
+    list-style: none;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.navibar ul li a {
+    color: var(--color-default);
+    text-decoration: none;
 }
