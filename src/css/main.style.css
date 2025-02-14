@@ -27,6 +27,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     position: relative;
+    background: var(--color-secondary);
 }
 
 .header-search {
@@ -89,12 +90,16 @@ header {
     margin: .5rem 0;
     border-left: 1px solid var(--color-default);
     height: 30px;
+    overflow: auto;
+    scrollbar-width: thin;
 }
 
 .navibar ul li {
     list-style: none;
     font-size: 20px;
     line-height: 30px;
+    width: fit-content;
+    flex-shrink: 0;
 }
 
 .navibar ul li a {
@@ -104,4 +109,10 @@ header {
 
 .header-search input:focus {
     outline: none;
+}
+
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
 }
