@@ -16,6 +16,12 @@ async function getTopicsList() {
     }
 }
 
+function scrollTopicsList() {
+    const nextScrollToggle = document.getElementById('right');
+    nextScrollToggle.onclick = () => listContainer.scrollBy({ left: 200, behavior: 'smooth' });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     getTopicsList();
+    scrollTopicsList();
 });
