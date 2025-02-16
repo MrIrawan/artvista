@@ -18,7 +18,10 @@ async function getTopicsList() {
 
 function scrollTopicsList() {
     const nextScrollToggle = document.getElementById('right');
+    const prevScrollToggle = document.getElementById('left');
+
     nextScrollToggle.onclick = () => listContainer.scrollBy({ left: 200, behavior: 'smooth' });
+    prevScrollToggle.onclick = () => listContainer.scrollBy({ left: -200, behavior: 'smooth' });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
