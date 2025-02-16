@@ -95,6 +95,9 @@ header {
     gap: 1rem;
     align-items: center;
     list-style-type: none;
+    padding: 0 5.5rem 0 4rem;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .topics-menu ul li {
@@ -113,7 +116,7 @@ header {
     background: var(--color-secondary);
     color: var(--color-default);
     height: 60px;
-    padding: 0 1rem;
+    padding: 0 .5rem;
     font-size: 36px;
     line-height: 38px;
     display: flex;
