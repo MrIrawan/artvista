@@ -83,28 +83,52 @@ header {
     height: 30px;
 }
 
-.navibar ul {
-    padding-left: 1rem;
-    padding-right: 6rem;
+.collections-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.collections-menu ul {
+    width: 100%;
     display: flex;
     gap: 1rem;
-    margin: .5rem 0;
-    height: 30px;
-    width: 90%;
-    overflow: auto;
+    align-items: center;
+    list-style-type: none;
 }
 
-.navibar ul li {
-    list-style: none;
-    font-size: 20px;
-    line-height: 30px;
-    width: fit-content;
+.collections-menu ul li {
     flex-shrink: 0;
+    font-size: 20px;
+    line-height: 24px;
 }
 
-.navibar ul li a {
+.collections-menu ul li a {
     color: var(--color-default);
     text-decoration: none;
+}
+
+.collections-menu span {
+    position: fixed;
+    background: var(--color-secondary);
+    color: var(--color-default);
+    height: 60px;
+    padding: 0 1rem;
+    font-size: 36px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#right {
+    box-shadow: rgba(50, 50, 93, 0.25) 13px 0 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#left {
+    right: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) -13px 0 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .header-search input:focus {

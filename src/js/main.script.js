@@ -9,7 +9,6 @@ async function getTopicsList() {
         topicsData.forEach(topic => {
             listContainer.insertAdjacentHTML('beforeend', `
                 <li><a href="#">${topic.title}</a></li>
-                
             `);
         });
     } catch (err) {
