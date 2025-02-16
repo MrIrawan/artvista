@@ -8,13 +8,19 @@ async function getPhotoFromAPI(apiUrl) {
         const photoResponse = await getDataFromAPI(apiUrl)
         .then(data => data.forEach(photo => {
             photoContainer.insertAdjacentHTML('beforeend', `
-                <div class="gallery-item" id="photo-item">
+                <div class="gallery-item" id="photo-item" data-id="${photo.id}">
                     <img src="${photo.urls.regular}" alt="photo">
                 </div>
             `)
-            console.log(data);
-            
         }));
+
+        const photoItems = document.querySelectorAll('#photo-item');
+        photoItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const photoId = item.getAttribute('data-id');
+            })
+        })
+        
     } catch (err) {
         console.error(`message error: ${err}`);
     }
