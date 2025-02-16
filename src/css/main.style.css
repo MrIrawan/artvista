@@ -83,13 +83,13 @@ header {
     height: 30px;
 }
 
-.collections-menu {
+.topics-menu {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.collections-menu ul {
+.topics-menu ul {
     width: 100%;
     display: flex;
     gap: 1rem;
@@ -97,18 +97,18 @@ header {
     list-style-type: none;
 }
 
-.collections-menu ul li {
+.topics-menu ul li {
     flex-shrink: 0;
     font-size: 20px;
     line-height: 24px;
 }
 
-.collections-menu ul li a {
+.topics-menu ul li a {
     color: var(--color-default);
     text-decoration: none;
 }
 
-.collections-menu span {
+.topics-menu span {
     position: fixed;
     background: var(--color-secondary);
     color: var(--color-default);
