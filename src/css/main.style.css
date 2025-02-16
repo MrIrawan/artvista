@@ -143,3 +143,27 @@ header {
     width: 100%;
     z-index: 9999;
 }
+
+#gallery {
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+}
+
+.gallery-wrapper {
+    /* background: var(--color-main); */
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.gallery-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 2rem 2rem;
+}
+
+.gallery-item {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
