@@ -8,37 +8,54 @@ const detailsContainer = document.getElementById('details-container');
 async function getPhotoDetails() {
     try {
         const dataResponse = await getDataFromAPI(apiUrl);
-        // detailsContainer.innerHTML = `
-        // <div class="header-details">
-        //     <img src="${dataResponse.urls.raw}" alt="${dataResponse.alt_description}">
-        // </div>
-        // <div class="body-details">
-        //     <div class="top-description">
-        //         <div class="top-description-item">
-        //             <span>
-        //                 <p>Views</p>
-        //                 <p>${dataResponse.views}</p>
-        //             </span>
-        //             <span>
-        //                 <p>Download</p>
-        //                 <p>${dataResponse.downloads}</p>
-        //             </span>
-        //             <span>
-        //                 <p>Featured In</p>
-        //                 <p>hello, world, lorem ipsum</p>
-        //             </span>
-        //         </div>
-        //         <div class="top-description-item">
-        //             <a href="#">
-        //                 <span class="material-symbols-sharp">download</span>
-        //                 Download
-        //             </a>
-        //         </div>
-        //     </div>
-        // </div>
-        // `
-        console.log(dataResponse);
-        
+        detailsContainer.innerHTML = `
+        <div class="header-details">
+            <img src="${dataResponse.urls.raw}" alt="${dataResponse.alt_description}">
+        </div>
+        <div class="body-details">
+            <div class="top-description">
+                <div class="top-description-item">
+                    <span>
+                        <p>Views</p>
+                        <p>${dataResponse.views}</p>
+                    </span>
+                    <span>
+                        <p>Download</p>
+                        <p>${dataResponse.downloads}</p>
+                    </span>
+                    <span>
+                        <p>Featured In</p>
+                        <p>hello, world, lorem ipsum</p>
+                    </span>
+                </div>
+                <div class="top-description-item">
+                    <a href="#">
+                        <span class="material-symbols-sharp">download</span>
+                        Download
+                    </a>
+                </div>
+            </div>
+            <div class="middle-description">
+                <div class="middle-description-item">
+                    <article>
+                        <span class="material-symbols-sharp">location_on</span>
+                        <p>${dataResponse.location.name ? dataResponse.location.name : 'Unknown'}</p>
+                    </article>
+                    <article>
+                        <span class="material-symbols-sharp">calendar_today</span>
+                        <p>Lorem, ipsum.</p>
+                    </article>
+                    <article>
+                        <span class="material-symbols-sharp">photo_camera</span>
+                        <p>${dataResponse.exif.name ? dataResponse.exif.name : 'Unknown'}</p>
+                    </article>
+                </div>
+                <div class="description-tags">
+                    ${dataResponse.tags.map((tag) => `<span>${tag.title}</span>`).join(" ")}
+                </div>
+            </div>
+        </div>
+        `
     } catch (err) {
         console.error(`error message : ${err}`);
     }
