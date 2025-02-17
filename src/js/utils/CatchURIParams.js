@@ -1,5 +1,5 @@
 function CatchURIParams() {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search).get('id');
     return params;
 }
 
