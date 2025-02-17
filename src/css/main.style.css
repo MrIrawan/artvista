@@ -170,4 +170,6 @@ header {
     width: 400px;
     height: 100%;
     object-fit: cover;
+    cursor: zoom-in;
+    transition: all .2s ease-in-out;
 }
