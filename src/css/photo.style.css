@@ -26,8 +26,17 @@ header {
     border: 1px solid var(--color-default);
 }
 
-header .header-title h2 {
-    cursor: pointer;
+header .header-link {
+    width: fit-content;
+}
+
+.header-link a {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    text-decoration: none;
+    color: var(--color-default);
 }
 
 .photo-details-wrapper {

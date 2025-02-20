@@ -30,6 +30,10 @@ header {
     background: var(--color-secondary);
 }
 
+.header-title {
+    cursor: pointer;
+}
+
 .header-search {
     width: 40%;
     padding: 1rem 0;
