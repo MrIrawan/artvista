@@ -26,7 +26,7 @@ async function getPhotoDetails() {
                     </span>
                     <span>
                         <p>Featured In</p>
-                        <p>hello, world, lorem ipsum</p>
+                        <p>${dataResponse.related_collections.results.map(collections => collections.title).join(', ')}</p>
                     </span>
                 </div>
                 <div class="top-description-item">
@@ -57,6 +57,8 @@ async function getPhotoDetails() {
             </div>
         </div>
         `
+        console.log(dataResponse);
+        
     } catch (err) {
         console.error(`error message : ${err}`);
     }
