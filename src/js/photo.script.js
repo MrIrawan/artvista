@@ -28,8 +28,6 @@ async function getPhotoDetails() {
                         <p>Featured In</p>
                         <p>${dataResponse.related_collections.results.map(collections => collections.title).join(', ')}</p>
                     </span>
-                </div>
-                <div class="top-description-item">
                     <a href="#">
                         <span class="material-symbols-sharp">download</span>
                         Download

@@ -78,6 +78,8 @@ header .header-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: blueviolet;
+    gap: 20px;
 }
 
 .top-description-item:nth-child(2) {
@@ -88,7 +90,6 @@ header .header-link {
 }
 
 .top-description-item:nth-child(1) span p:nth-child(1) {
-    margin-bottom: 5px;
     font-size: 18px;
     line-height: 20px;
     font-weight: 600;
