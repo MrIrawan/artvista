@@ -1,5 +1,6 @@
 import { getDataFromAPI } from './utils/API.js';
 import { CatchURIParams } from './utils/CatchURIParams.js';
+import { DateFormatter } from './utils/DateFormatter.js';
 
 const paramsId = CatchURIParams();
 const apiUrl = `https://api.unsplash.com/photos/${paramsId}?client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
@@ -42,12 +43,12 @@ async function getPhotoDetails() {
                         <p>${dataResponse.location.name ? dataResponse.location.name : 'Unknown'}</p>
                     </article>
                     <article>
-                        <span class="material-symbols-sharp">calendar_today</span>
-                        <p>Lorem, ipsum.</p>
-                    </article>
-                    <article>
                         <span class="material-symbols-sharp">photo_camera</span>
                         <p>${dataResponse.exif.name ? dataResponse.exif.name : 'Unknown'}</p>
+                    </article>
+                    <article>
+                        <span class="material-symbols-sharp">calendar_today</span>
+                        <p>published on ${DateFormatter(dataResponse.created_at)}</p>
                     </article>
                 </div>
                 <div class="description-tags">
