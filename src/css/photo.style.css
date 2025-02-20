@@ -68,44 +68,37 @@ header .header-link {
     margin-top: 30px;
 }
 
-.top-description {
+.top-description-item {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: baseline;
+    gap: 40px;
 }
 
-.top-description-item:nth-child(1) {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: blueviolet;
-    gap: 20px;
-}
-
-.top-description-item:nth-child(2) {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.top-description-item:nth-child(1) span p:nth-child(1) {
+.top-description-item span p:nth-child(1) {
+    margin-bottom: 5px;
     font-size: 18px;
     line-height: 20px;
     font-weight: 600;
     color: var(--color-default);
 }
 
-.top-description-item:nth-child(2) a {
-    width: 50%;
+.top-description-item span:nth-child(3) p:nth-child(2) {
+    width: 200px;
+}
+
+.top-description-item a {
+    width: 150px;
     padding: .7rem .8rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
     gap: 5px;
     text-decoration: none;
     color: var(--color-secondary);
     background: var(--color-main);
+    margin-left: auto;
 }
 
 .middle-description {
