@@ -28,10 +28,33 @@ async function getPhotoFromAPI(apiUrl) {
     }
 }
 
-function handleUserSearch() {
-    
+async function handleUserSearch() {
+    const userKeyword = encodeURIComponent(headerInput.value);
+    const searchApiUrl = `https://api.unsplash.com/search/photos?query=${userKeyword}&per_page=30&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+
+    try {
+        const searchResponse = await getDataFromAPI(searchApiUrl);
+        
+        searchResponse.results.forEach(res => {
+            photoContainer.insertAdjacentHTML('beforeend', `
+                <div class="gallery-item" id="photo-item" data-id="${res.id}">
+                    <img src="${res.urls.regular}" alt="photo">
+                </div>
+            `);
+        })
+        
+    } catch(err) {
+        console.error(`message error: ${err}`);
+    }
 }
 
+
+headerInput.addEventListener('keyup', (e) => {
+    if (e.which === 13) {
+        photoContainer.innerHTML = '';
+        handleUserSearch();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     getPhotoFromAPI(apiUrl);
