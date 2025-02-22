@@ -55,8 +55,8 @@ async function getPhotoDetails() {
             </div>
         </div>
         `
-        console.log(dataResponse);
         
+        document.title = `${dataResponse.alt_description} | ArtVista`;
     } catch (err) {
         console.error(`error message : ${err}`);
     }
