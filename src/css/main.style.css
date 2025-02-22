@@ -108,11 +108,8 @@ header {
     flex-shrink: 0;
     font-size: 20px;
     line-height: 24px;
-}
-
-.topics-menu ul li a {
     color: var(--color-default);
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .topics-menu span {

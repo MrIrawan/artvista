@@ -6,3 +6,5 @@ function CollectionsDetailsHandler(element) {
         });
     });
 }
+
+export { CollectionsDetailsHandler };
