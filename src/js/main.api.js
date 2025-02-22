@@ -1,4 +1,5 @@
 import { getDataFromAPI } from "./utils/API.js";
+import { ClickPhotoToDetails } from "./utils/ClickPhotoToDetails.js";
 
 const photoContainer = document.getElementById('photo-grid');
 const headerInput = document.getElementById('search');
