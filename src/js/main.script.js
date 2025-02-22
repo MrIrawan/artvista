@@ -9,8 +9,10 @@ async function getTopicsList() {
         const topicsData = await getDataFromAPI(apiUrl)
         topicsData.forEach(topic => {
             listContainer.insertAdjacentHTML('beforeend', `
-                <li><a href="#">${topic.title}</a></li>
+                <li id="topic-items" data-id="${topic.id}">${topic.title}</li>
             `);
+            
+            const topicItems = document.querySelectorAll('#topic-items');
             
         });
     } catch (err) {
