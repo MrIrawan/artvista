@@ -11,7 +11,6 @@ async function getTopicsList() {
             listContainer.insertAdjacentHTML('beforeend', `
                 <li><a href="#">${topic.title}</a></li>
             `);
-            console.log(topic);
             
         });
     } catch (err) {

@@ -1,5 +1,5 @@
 import { getDataFromAPI } from "./utils/API.js";
-import { ClickPhotoToDetails } from "./utils/ClickPhotoToDetails.js";
+import { PhotoDetailsHandler } from "./utils/PhotoDetailsHandler.js";
 
 const photoContainer = document.getElementById('photo-grid');
 const headerInput = document.getElementById('search');
@@ -17,7 +17,7 @@ async function getPhotoFromAPI(apiUrl) {
         }));
 
         const photoItems = document.querySelectorAll('#photo-item');
-        ClickPhotoToDetails(photoItems);
+        PhotoDetailsHandler(photoItems);
         
     } catch (err) {
         console.error(`message error: ${err}`);
@@ -40,7 +40,7 @@ async function handleUserSearch() {
         })
         
         const photoItems = document.querySelectorAll('#photo-item');
-        ClickPhotoToDetails(photoItems);
+        PhotoDetailsHandler(photoItems);
 
     } catch(err) {
         console.error(`message error: ${err}`);
