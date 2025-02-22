@@ -17,12 +17,7 @@ async function getPhotoFromAPI(apiUrl) {
         }));
 
         const photoItems = document.querySelectorAll('#photo-item');
-        photoItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const photoId = item.getAttribute('data-id');
-                window.location.href = `photo.html?id=${photoId}`
-            })
-        })
+        ClickPhotoToDetails(photoItems);
         
     } catch (err) {
         console.error(`message error: ${err}`);
@@ -44,6 +39,9 @@ async function handleUserSearch() {
             `);
         })
         
+        const photoItems = document.querySelectorAll('#photo-item');
+        ClickPhotoToDetails(photoItems);
+
     } catch(err) {
         console.error(`message error: ${err}`);
     }
