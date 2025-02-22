@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>collections</title>
+    <link rel="stylesheet" href="node_modules/material-symbols/index.css">
+    <link rel="stylesheet" href="src/css/collections.style.css">
 </head>
 <body>
-    
+    <header class="fixed-header">
+        <div class="header-title" id="artvista-title">
+            <h2>ArtVista</h2>
+        </div>
+        <div class="header-search">
+            <span class="material-symbols-sharp">search</span>
+            <input type="search" name="search" id="search" autocomplete="off">
+        </div>
+        <div class="header-menu">
+            <div class="navmenu-btn">
+                <span class="material-symbols-sharp">menu</span>
+            </div>
+        </div>
+        <nav class="navibar">
+            <p>Collections</p>
+                <div class="topics-menu">
+                    <span class="material-symbols-sharp" id="right">chevron_right</span>
+                    <ul id="topics-container">
+
+                    </ul>
+                    <span class="material-symbols-sharp" id="left">chevron_left</span>
+                </div>
+        </nav>
+    </header>
 </body>
 </html>
