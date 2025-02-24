@@ -1,8 +1,10 @@
 import { getDataFromAPI } from "./utils/API.js";
 import { CatchURIParams } from "./utils/CatchURIParams.js";
+import { CollectionsDetailsHandler } from "./utils/CollectionsDetailsHandler.js";
 
 const listContainer = document.getElementById('topics-container');
 const apiUrl = `https://api.unsplash.com/topics?per_page=16&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+const artVistaTitle = document.getElementById('artvista-title');
 
 async function getTopicsList() {
     try {
@@ -13,6 +15,7 @@ async function getTopicsList() {
             `);
             
             const topicItems = document.querySelectorAll('#topic-items');
+            CollectionsDetailsHandler(topicItems);
             
         });
     } catch (err) {
@@ -22,7 +25,7 @@ async function getTopicsList() {
 
 async function getCollectionsDetails() {
     const collectionsId = CatchURIParams();
-    const collectionsUrl = `https://api.unsplash.com/collections/:${collectionsId}?client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+    const collectionsUrl = `https://api.unsplash.com/topics/${collectionsId}?client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
 
     try {
         const collectionsData = await getDataFromAPI(collectionsUrl);
@@ -36,4 +39,5 @@ async function getCollectionsDetails() {
 document.addEventListener('DOMContentLoaded', () => {
     getTopicsList();
     getCollectionsDetails();
+    artVistaTitle.onclick = () => window.location.href = 'main.html';
 });
