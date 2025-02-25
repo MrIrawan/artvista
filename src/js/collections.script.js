@@ -2,6 +2,7 @@ import { getDataFromAPI } from "./utils/API.js";
 import { CatchURIParams } from "./utils/CatchURIParams.js";
 import { CollectionsDetailsHandler } from "./utils/CollectionsDetailsHandler.js";
 import { DateFormatter } from "./utils/DateFormatter.js";
+import { PhotoDetailsHandler } from "./utils/PhotoDetailsHandler.js";
 
 const listContainer = document.getElementById('topics-container');
 const apiUrl = `https://api.unsplash.com/topics?per_page=16&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
@@ -65,15 +66,17 @@ async function getCollectionsDetails() {
         `;
 
         const collectionsBody = document.getElementById('collections-body');
-
         relatedPhotos.forEach(photo => {
             collectionsBody.insertAdjacentHTML('beforeend', `
-                <figure>
+                <figure id="collections-item" data-id="${photo.id}">
                     <img src="${photo.urls.regular}" alt="image ${photo.id}">
                     <figcaption>${photo.alt_description}</figcaption>
                 </figure>
             `);
-        })
+        });
+
+        const collectionsItems = document.querySelectorAll('#collections-item');
+        PhotoDetailsHandler(collectionsItems);
     } catch (err) {
         console.error(`error message: ${err}`);
     }
