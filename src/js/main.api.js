@@ -10,9 +10,10 @@ async function getPhotoFromAPI(apiUrl) {
         const photoResponse = await getDataFromAPI(apiUrl)
         .then(data => data.forEach(photo => {
             photoContainer.insertAdjacentHTML('beforeend', `
-                <div class="gallery-item" id="photo-item" data-id="${photo.id}">
-                    <img src="${photo.urls.regular}" alt="photo">
-                </div>
+                <figure class="gallery-item" id="photo-item" data-id="${photo.id}">
+                    <img src="${photo.urls.regular}" alt="photo ${photo.id}"">
+                    <figcaption>${photo.description}</figcaption>
+                </figure>
             `)
         }));
 
