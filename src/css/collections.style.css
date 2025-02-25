@@ -204,7 +204,9 @@ header {
     border: 1px solid var(--color-default);
 }
 
-.header-image {
-    width: 400px;
-    height: 250px;
+.header-image img {
+    width: 350px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    filter: brightness(0.8);
 }
