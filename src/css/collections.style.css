@@ -226,3 +226,7 @@ header {
     padding-left: .7rem;
     transition: all .2s ease-in-out;
 }
+
+.image-hover {
+    filter: brightness(30%);
+}
