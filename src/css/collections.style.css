@@ -144,3 +144,67 @@ header {
     width: 100%;
     z-index: 9999;
 }
+
+#collections {
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+}
+
+.collections-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.collections-header {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--color-default);
+}
+
+.header-description h2 {
+    font-size: 30px;
+    line-height: 34px;
+    margin: 0;
+}
+
+.header-description p {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 40rem;
+}
+
+.other-description {
+    display: flex;
+    gap: 24px;
+}
+
+.other-description #description-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#description-wrapper p {
+    margin: 0;
+}
+
+#description-wrapper span {
+    color: var(--color-main);
+}
+
+.other-description hr {
+    margin: 0;
+    align-self: center;
+    min-height: 30px;
+    border: 1px solid var(--color-default);
+}
+
+.header-image {
+    width: 400px;
+    height: 250px;
+}
