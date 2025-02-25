@@ -31,6 +31,8 @@ async function getCollectionsDetails() {
 
     try {
         const collectionsData = await getDataFromAPI(collectionsUrl);
+        const relatedPhotos = await getRelatedPhotos(collectionsId);
+
         collectionsContainer.innerHTML = `
             <div class="collections-header">
                 <div class="header-description">
@@ -57,12 +59,31 @@ async function getCollectionsDetails() {
                     </figure>
                 </div>
             </div>
-            <div class="collections-body"></div>
+            <div class="collections-body" id="collections-body">
+                
+            </div>
         `;
-        
+
+        const collectionsBody = document.getElementById('collections-body');
+
+        relatedPhotos.forEach(photo => {
+            collectionsBody.insertAdjacentHTML('beforeend', `
+                <figure>
+                    <img src="${photo.urls.regular}" alt="image ${photo.id}">
+                    <figcaption>${photo.alt_description}</figcaption>
+                </figure>
+            `);
+        })
     } catch (err) {
         console.error(`error message: ${err}`);
     }
+}
+
+async function getRelatedPhotos(collectionsId) {
+    const relatedPhotosUrl = `https://api.unsplash.com/topics/${collectionsId}/photos?per_page=30&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+    const photoResponse = await getDataFromAPI(relatedPhotosUrl);
+
+    return photoResponse;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
