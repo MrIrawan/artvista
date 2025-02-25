@@ -214,6 +214,7 @@ header {
 .header-image figure {
     position: relative;
     overflow: hidden;
+    transition: all .4s ease-in-out;
 }
 
 .header-image figure figcaption {
@@ -224,9 +225,14 @@ header {
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: .7rem;
-    transition: all .2s ease-in-out;
+    transform: translateY(100%);
+    transition: all .3s ease-in-out;
 }
 
-.image-hover {
-    filter: brightness(30%);
+.header-image figure:hover img {
+    filter: brightness(70%);
+}
+
+.header-image figure:hover figcaption {
+    transform: translateY(0);
 }

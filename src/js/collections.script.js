@@ -7,7 +7,6 @@ const listContainer = document.getElementById('topics-container');
 const apiUrl = `https://api.unsplash.com/topics?per_page=16&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
 const artVistaTitle = document.getElementById('artvista-title');
 const collectionsContainer = document.getElementById('collections-container');
-let isHover = false;
 
 async function getTopicsList() {
     try {
@@ -61,23 +60,9 @@ async function getCollectionsDetails() {
             <div class="collections-body"></div>
         `;
         
-        const collectionsImage = document.getElementById('collections-image');
-        const imageTitle = document.getElementById('image-title');
-
-        onHoverImage(collectionsImage, imageTitle);
-        
-
     } catch (err) {
-
+        console.error(`error message: ${err}`);
     }
-}
-
-function onHoverImage(imageElement, titleElement) {
-    imageElement.addEventListener('mouseover', () => {
-        isHover = true;
-        isHover ? imageElement.classList.add('image-hover') : imageElement.classList.remove('image-hover');
-        isHover ? titleElement.style.transformTranslateY = '0' : titleElement.style.transformTranslateY = '-100%';
-    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
