@@ -12,7 +12,7 @@ async function getPhotoFromAPI(apiUrl) {
             photoContainer.insertAdjacentHTML('beforeend', `
                 <figure class="gallery-item" id="photo-item" data-id="${photo.id}">
                     <img src="${photo.urls.regular}" alt="photo ${photo.id}"">
-                    <figcaption>${photo.description}</figcaption>
+                    <figcaption>${photo.alt_description ? photo.alt_description : 'no description'}</figcaption>
                 </figure>
             `)
         }));
@@ -34,10 +34,13 @@ async function handleUserSearch() {
         
         searchResponse.results.forEach(res => {
             photoContainer.insertAdjacentHTML('beforeend', `
-                <div class="gallery-item" id="photo-item" data-id="${res.id}">
-                    <img src="${res.urls.regular}" alt="photo">
-                </div>
+                <figure class="gallery-item" id="photo-item" data-id="${res.id}">
+                    <img src="${res.urls.regular}" alt="photo ${res.id}"">
+                    <figcaption>${res.alt_description ? res.alt_description : 'no description'}</figcaption>
+                </figure>
             `);
+            console.log(res);
+            
         })
         
         const photoItems = document.querySelectorAll('#photo-item');

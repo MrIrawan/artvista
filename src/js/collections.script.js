@@ -70,7 +70,7 @@ async function getCollectionsDetails() {
             collectionsBody.insertAdjacentHTML('beforeend', `
                 <figure id="collections-item" data-id="${photo.id}">
                     <img src="${photo.urls.regular}" alt="image ${photo.id}">
-                    <figcaption>${photo.alt_description ? photo.alt_description : 'No description'}</figcaption>
+                    <figcaption>${photo.alt_description ? photo.alt_description : 'no description'}</figcaption>
                 </figure>
             `);
         });
