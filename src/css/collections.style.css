@@ -161,7 +161,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid var(--color-default);
+    /* border: 1px solid var(--color-default); */
 }
 
 .header-description h2 {
@@ -205,8 +205,24 @@ header {
 }
 
 .header-image img {
-    width: 350px;
-    aspect-ratio: 1/1;
+    width: 400px;
+    aspect-ratio: 4/3;
     object-fit: cover;
-    filter: brightness(0.8);
+    transition: all .2s ease-in-out;
+}
+
+.header-image figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-image figure figcaption {
+    color: var(--color-secondary);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: .7rem;
+    transition: all .2s ease-in-out;
 }

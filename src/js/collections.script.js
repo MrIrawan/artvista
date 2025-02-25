@@ -44,12 +44,17 @@ async function getCollectionsDetails() {
                         <hr>
                         <span id="description-wrapper">
                             <span class="material-symbols-sharp">image</span>
-                            <p>up to ${collectionsData.total_photos} photo's</p>
+                            <p>up to ${collectionsData.total_photos.toLocaleString()} photo's</p>
                         </span>
                     </div>
                 </div>
                 <div class="header-image">
+                    <figure>
                     <img src="${collectionsData.cover_photo.urls.regular}" alt="image ${collectionsData.id}">
+                        <figcaption>
+                            ${collectionsData.cover_photo.alt_description}
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
             <div class="collections-body"></div>
