@@ -199,3 +199,33 @@ header {
 .gallery-item:hover figcaption {
     transform: translateY(0);
 }
+
+.gallery-page-option {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-container span:nth-child(1),
+.page-container span:nth-child(3) {
+    font-size: 40px;
+    line-height: 42px;
+    color: var(--color-default);
+    cursor: pointer;
+}
+
+.page-container span:nth-child(2) {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-secondary);
+    background: var(--color-main);
+    padding: .6rem 1rem;
+    cursor: pointer;
+}

@@ -3,7 +3,12 @@ import { PhotoDetailsHandler } from "./utils/PhotoDetailsHandler.js";
 
 const photoContainer = document.getElementById('photo-grid');
 const headerInput = document.getElementById('search');
-const apiUrl = `https://api.unsplash.com/photos/?per_page=30&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+const nextPageBtn = document.getElementById('next-page');
+const prevPageBtn = document.getElementById('prev-page');
+const currentPageContainer = document.getElementById('current-page');
+let apiUrl = `https://api.unsplash.com/photos/?per_page=30&page=1&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+let currentPage = 1;
+const availablePage = 200;
 
 async function getPhotoFromAPI(apiUrl) {
     try {
@@ -19,7 +24,7 @@ async function getPhotoFromAPI(apiUrl) {
 
         const photoItems = document.querySelectorAll('#photo-item');
         PhotoDetailsHandler(photoItems);
-        
+
     } catch (err) {
         console.error(`message error: ${err}`);
     }
@@ -60,5 +65,27 @@ headerInput.addEventListener('keyup', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    getPhotoFromAPI(apiUrl);
+    nextPageBtn.addEventListener('click', () => {
+        if (currentPage < availablePage) {
+            currentPage += 1;
+            apiUrl = `https://api.unsplash.com/photos/?per_page=30&page=${currentPage}&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+            photoContainer.innerHTML = '';
+            getPhotoFromAPI(apiUrl);
+            currentPageContainer.textContent = currentPage;
+        }
+    });
+
+    prevPageBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage -= 1;
+            apiUrl = `https://api.unsplash.com/photos/?per_page=30&page=${currentPage}&client_id=xHA1LFvj7tkMQdgmzgfJH7iCn2BXd5BwJYX4TxLaIv4`;
+            photoContainer.innerHTML = '';
+            getPhotoFromAPI(apiUrl);
+            currentPageContainer.textContent = currentPage;
+        }
+    })
+
+    if (currentPage === 1) {
+        getPhotoFromAPI(apiUrl);
+    }
 });
