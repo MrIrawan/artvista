@@ -137,4 +137,5 @@ header .header-link {
     border: 2px solid var(--color-main);
     padding: 3px 5px;
     color: var(--color-secondary);
+    cursor: pointer;
 }
