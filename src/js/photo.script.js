@@ -18,11 +18,11 @@ async function getPhotoDetails() {
                 <div class="top-description-item">
                     <span>
                         <p>Views</p>
-                        <p>${dataResponse.views}</p>
+                        <p>${dataResponse.views.toLocaleString()}</p>
                     </span>
                     <span>
                         <p>Download</p>
-                        <p>${dataResponse.downloads}</p>
+                        <p>${dataResponse.downloads.toLocaleString()}</p>
                     </span>
                     <span>
                         <p>Featured In</p>
