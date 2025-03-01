@@ -14,44 +14,27 @@ async function getPhotoDetails() {
             <img src="${dataResponse.urls.raw}" alt="${dataResponse.alt_description}">
         </div>
         <div class="body-details">
-            <div class="top-description">
-                <div class="top-description-item">
-                    <span>
-                        <p>Views</p>
-                        <p>${dataResponse.views.toLocaleString()}</p>
-                    </span>
-                    <span>
-                        <p>Download</p>
-                        <p>${dataResponse.downloads.toLocaleString()}</p>
-                    </span>
-                    <span>
-                        <p>Featured In</p>
-                        <p>${dataResponse.related_collections.results.map(collections => collections.title).join(', ')}</p>
-                    </span>
-                    <a href="#">
-                        <span class="material-symbols-sharp">download</span>
-                        Download
-                    </a>
-                </div>
+            <div class="photo-title">
+                <h1>${dataResponse.alt_description}</h1>
             </div>
-            <div class="middle-description">
-                <div class="middle-description-item">
-                    <article>
+            <div class="photo-description">
+                <article class="left-description">
+                    <span>
                         <span class="material-symbols-sharp">location_on</span>
                         <p>${dataResponse.location.name ? dataResponse.location.name : 'Unknown'}</p>
-                    </article>
-                    <article>
+                    </span>
+                    <span>
                         <span class="material-symbols-sharp">photo_camera</span>
                         <p>${dataResponse.exif.name ? dataResponse.exif.name : 'Unknown'}</p>
-                    </article>
-                    <article>
+                    </span>
+                    <span>
                         <span class="material-symbols-sharp">calendar_today</span>
-                        <p>published on ${DateFormatter(dataResponse.created_at)}</p>
-                    </article>
-                </div>
-                <div class="description-tags">
-                    ${dataResponse.tags.map((tag) => `<span>${tag.title}</span>`).join(" ")}
-                </div>
+                        <p>Published on ${DateFormatter(dataResponse.created_at)}</p>
+                    </span>
+                </article>
+                <article class="right-description">
+                    
+                </article>
             </div>
         </div>
         `
