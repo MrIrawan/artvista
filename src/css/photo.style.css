@@ -47,10 +47,10 @@ header .header-link {
 .photo-details-container {
     display: flex;
     flex-direction: column;
-    gap: calc(24px * 2);
+    gap: 24px;
     padding: 2rem 2rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    width: fit-content;
+    width: 1080px;
     margin: 0 auto;
 }
 
@@ -64,8 +64,10 @@ header .header-link {
     object-fit: cover;
 }
 
-.body-details {
-    /* min-height: 676px; */
+.photo-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .photo-description .left-description {
@@ -92,14 +94,36 @@ header .header-link {
     margin: 0;
 }
 
+.right-description {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.right-description div span {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.right-description div div {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* gap: 8px; */
+}
+
+.right-description div:nth-child(3) div p {
+    /* background: #000; */
+    max-width: 13rem;
+}
+
 .body-details .photo-title h1 {
     margin: 0;
     margin-bottom: 1rem;
     font-size: 40px;
     line-height: 48px;
 }
-
-
 
 .description-tags {
     margin-top: 15px;

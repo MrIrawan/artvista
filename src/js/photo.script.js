@@ -33,11 +33,29 @@ async function getPhotoDetails() {
                     </span>
                 </article>
                 <article class="right-description">
-                    
+                    <div>
+                        <div>
+                            <span>Downloads</span>
+                            <p>${dataResponse.downloads.toLocaleString()}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Views</span>
+                            <p>${dataResponse.views.toLocaleString()}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Featured At</span>
+                            <p>${dataResponse.related_collections.results.map(collection => collection.title).join(', ')}</p>
+                        </div>
+                    </div>
                 </article>
             </div>
         </div>
         `
+        console.log(dataResponse);
         
         document.title = `${dataResponse.alt_description} | ArtVista`;
     } catch (err) {
