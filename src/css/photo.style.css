@@ -46,31 +46,26 @@ header .header-link {
 
 .photo-details-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: calc(24px * 2);
-    align-items: flex-start;
     padding: 2rem 2rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    width: 1138px;
+    width: fit-content;
     margin: 0 auto;
 }
 
 .header-details {
     width: fit-content;
-    align-self: center;
 }
 
 .header-details img {
-    width: 450px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .body-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 676px;
+    /* min-height: 676px; */
 }
 
 .photo-description .left-description {

@@ -11,7 +11,7 @@ async function getPhotoDetails() {
         const dataResponse = await getDataFromAPI(apiUrl);
         detailsContainer.innerHTML = `
         <div class="header-details">
-            <img src="${dataResponse.urls.raw}" alt="${dataResponse.alt_description}">
+            <img src="${dataResponse.urls.regular}" alt="${dataResponse.alt_description}">
         </div>
         <div class="body-details">
             <div class="photo-title">
