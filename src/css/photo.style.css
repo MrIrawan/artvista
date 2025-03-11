@@ -68,6 +68,7 @@ header .header-link {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .photo-description .left-description {
@@ -109,13 +110,18 @@ header .header-link {
 .right-description div div {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* gap: 8px; */
 }
 
 .right-description div:nth-child(3) div p {
-    /* background: #000; */
     max-width: 13rem;
+}
+
+.download {
+    width: 100%;
+}
+
+.body-details .photo-title {
+    margin-bottom: 2rem;
 }
 
 .body-details .photo-title h1 {

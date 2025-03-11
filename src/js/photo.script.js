@@ -52,6 +52,9 @@ async function getPhotoDetails() {
                         </div>
                     </div>
                 </article>
+                <article class="download">
+                    <button>Download</button>
+                </article>
             </div>
         </div>
         `
