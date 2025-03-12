@@ -258,6 +258,7 @@ header {
 .feature-result article {
     width: 200px;
     height: 300px;
+    cursor: zoom-in;
 }
 
 .feature-result article img {

@@ -1,4 +1,5 @@
 import { getDataFromAPI } from "./utils/API.js";
+import { PhotoDetailsHandler } from "./utils/PhotoDetailsHandler.js";
 const navibar = document.querySelector('.navibar');
 const resultContainer = document.querySelector('.try-feature .feature-result');
 const featureSearchInput = document.querySelector('#feature-search');
@@ -30,13 +31,14 @@ async function onTryFeatureHandler() {
         const result = await getDataFromAPI(apiUrl).then(data => data.results);
         result.forEach(data => {
             resultContainer.insertAdjacentHTML('beforeend', `
-                <article class="image-card">
+                <article class="image-card" data-id="${data.id}">
                     <img src="${data.urls.small}" alt="${data.alt_description}">
                 </article>
             `);
         });
         
-        
+        const imageCards = document.querySelectorAll('.image-card');
+        PhotoDetailsHandler(imageCards);
 
     } catch (err) {
         console.error('message error', err);

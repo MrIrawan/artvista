@@ -16,7 +16,7 @@ async function getPhotoFromAPI(apiUrl) {
         .then(data => data.forEach(photo => {
             photoContainer.insertAdjacentHTML('beforeend', `
                 <figure class="gallery-item" id="photo-item" data-id="${photo.id}">
-                    <img src="${photo.urls.regular}" alt="photo ${photo.id}"">
+                    <img src="${photo.urls.regular}" alt="photo ${photo.id}">
                     <figcaption>${photo.alt_description ? photo.alt_description : 'no description'}</figcaption>
                 </figure>
             `)
