@@ -50,12 +50,13 @@ header .header-link {
     gap: 24px;
     padding: 2rem 2rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    width: 1080px;
+    width: 600px;
     margin: 0 auto;
 }
 
 .header-details {
-    width: fit-content;
+    width: 600px;
+    overflow: hidden;
 }
 
 .header-details img {
@@ -66,6 +67,8 @@ header .header-link {
 
 .photo-description {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
@@ -75,6 +78,7 @@ header .header-link {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .left-description span {
@@ -93,12 +97,15 @@ header .header-link {
     font-size: 18px;
     line-height: 20px;
     margin: 0;
+    max-width: 20rem;
 }
 
 .right-description {
     display: flex;
     gap: 1rem;
     align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .right-description div span {
@@ -122,6 +129,7 @@ header .header-link {
 
 .body-details .photo-title {
     margin-bottom: 2rem;
+    width: fit-content;
 }
 
 .body-details .photo-title h1 {
@@ -129,6 +137,7 @@ header .header-link {
     margin-bottom: 1rem;
     font-size: 40px;
     line-height: 48px;
+    max-width: 31rem;
 }
 
 .description-tags {

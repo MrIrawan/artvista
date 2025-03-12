@@ -11,7 +11,7 @@ async function getPhotoDetails() {
         const dataResponse = await getDataFromAPI(apiUrl);
         detailsContainer.innerHTML = `
         <div class="header-details">
-            <img src="${dataResponse.urls.regular}" alt="${dataResponse.alt_description}">
+            <img src="${dataResponse.urls.raw}" alt="${dataResponse.alt_description}">
         </div>
         <div class="body-details">
             <div class="photo-title">
@@ -47,10 +47,13 @@ async function getPhotoDetails() {
                     </div>
                     <div>
                         <div>
-                            <span>Featured At</span>
+                            <span>Featured in</span>
                             <p>${dataResponse.related_collections.results.map(collection => collection.title).join(', ')}</p>
                         </div>
                     </div>
+                </article>
+                <article class="description-tags">
+                    ${dataResponse.tags.map(tag => `<span>${tag.title}</span>`).join(' ')}
                 </article>
                 <article class="download">
                     <button>Download</button>
