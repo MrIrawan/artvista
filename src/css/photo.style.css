@@ -46,37 +46,39 @@ header .header-link {
 
 .photo-details-container {
     display: flex;
-    flex-direction: row;
-    gap: calc(24px * 2);
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
     padding: 2rem 2rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    width: 1138px;
+    width: 600px;
     margin: 0 auto;
 }
 
 .header-details {
-    width: fit-content;
-    align-self: center;
+    width: 600px;
+    overflow: hidden;
 }
 
 .header-details img {
-    width: 450px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.body-details {
+.photo-description {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     justify-content: space-between;
-    min-height: 676px;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .photo-description .left-description {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .left-description span {
@@ -95,6 +97,54 @@ header .header-link {
     font-size: 18px;
     line-height: 20px;
     margin: 0;
+    max-width: 20rem;
+}
+
+.right-description {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right-description div span {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.right-description div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-description div:nth-child(3) div p {
+    max-width: 13rem;
+}
+
+.download {
+    width: 100%;
+    background: #000;
+}
+
+.download button {
+    width: 100%;
+    background: var(--color-default);
+    color: #fff;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.body-details .photo-title {
+    margin-bottom: 2rem;
+    width: fit-content;
 }
 
 .body-details .photo-title h1 {
@@ -102,15 +152,15 @@ header .header-link {
     margin-bottom: 1rem;
     font-size: 40px;
     line-height: 48px;
+    max-width: 31rem;
 }
-
-
 
 .description-tags {
     margin-top: 15px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .description-tags span {
