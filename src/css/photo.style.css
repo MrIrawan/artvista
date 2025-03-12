@@ -125,6 +125,21 @@ header .header-link {
 
 .download {
     width: 100%;
+    background: #000;
+}
+
+.download button {
+    width: 100%;
+    background: var(--color-default);
+    color: #fff;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .body-details .photo-title {
@@ -145,6 +160,7 @@ header .header-link {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .description-tags span {

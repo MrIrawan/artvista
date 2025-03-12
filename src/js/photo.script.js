@@ -56,7 +56,10 @@ async function getPhotoDetails() {
                     ${dataResponse.tags.map(tag => `<span>${tag.title}</span>`).join(' ')}
                 </article>
                 <article class="download">
-                    <button>Download</button>
+                    <button>
+                        <span class="material-symbols-sharp">download</span>
+                        Download Vista
+                    </button>
                 </article>
             </div>
         </div>
