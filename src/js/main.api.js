@@ -1,5 +1,6 @@
 import { getDataFromAPI } from "./utils/API.js";
 import { PhotoDetailsHandler } from "./utils/PhotoDetailsHandler.js";
+import { showLoading, hideLoading } from "./utils/LoadingAnimation.js";
 
 const photoContainer = document.getElementById('photo-grid');
 const headerInput = document.getElementById('search');
@@ -11,15 +12,18 @@ let currentPage = 1;
 const availablePage = 200;
 
 async function getPhotoFromAPI(apiUrl) {
+    showLoading();
     try {
         const photoResponse = await getDataFromAPI(apiUrl)
         .then(data => data.forEach(photo => {
-            photoContainer.insertAdjacentHTML('beforeend', `
-                <figure class="gallery-item" id="photo-item" data-id="${photo.id}">
-                    <img src="${photo.urls.regular}" alt="photo ${photo.id}">
-                    <figcaption>${photo.alt_description ? photo.alt_description : 'no description'}</figcaption>
-                </figure>
-            `)
+            setTimeout(() => {
+                photoContainer.insertAdjacentHTML('beforeend', `
+                    <figure class="gallery-item" id="photo-item" data-id="${photo.id}">
+                        <img src="${photo.urls.regular}" alt="photo ${photo.id}">
+                        <figcaption>${photo.alt_description ? photo.alt_description : 'no description'}</figcaption>
+                    </figure>
+                `)
+            }, 3000);
         }));
 
         const photoItems = document.querySelectorAll('#photo-item');
@@ -27,6 +31,8 @@ async function getPhotoFromAPI(apiUrl) {
 
     } catch (err) {
         console.error(`message error: ${err}`);
+    } finally {
+        hideLoading();
     }
 }
 
